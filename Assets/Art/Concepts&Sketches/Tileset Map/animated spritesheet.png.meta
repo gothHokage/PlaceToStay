@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ad2dac048a14e642815b1d3a6009700
+guid: 254ccbcfc6cf8b94783fd5cddbd148c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7822412585322299217
-    second: farm-storage_0
+      213: 7801526121986085657
+    second: animated spritesheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: farm-storage_0
+      name: animated spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15f3eaa2dcace8c60800000000000000
-      internalID: 7822412585322299217
+      spriteID: 91359e67ca6944c60800000000000000
+      internalID: 7801526121986085657
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      farm-storage_0: 7822412585322299217
+      animated spritesheet_0: 7801526121986085657
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
