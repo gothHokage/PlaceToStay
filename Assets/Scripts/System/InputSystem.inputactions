@@ -16,7 +16,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Use tool",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "d3881281-909c-4bb9-8b0b-061155cf4e88",
                     "expectedControlType": "",
@@ -28,15 +28,6 @@
                     "name": "Menu",
                     "type": "Button",
                     "id": "e1bade4a-8ef7-4e8f-b9d2-5406ad055a76",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Map",
-                    "type": "Button",
-                    "id": "b8600721-302c-411b-9d58-3d0a21d8fdc3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -56,18 +47,29 @@
                 {
                     "name": "",
                     "id": "1c05389c-11e7-4dac-bd26-fbd2ab3a981e",
-                    "path": "",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Use tool",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe596a0e-72fb-4439-ac56-8fbb9df5c97f",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "84967bae-03e9-4593-8119-b433c363c159",
-                    "path": "",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -77,19 +79,30 @@
                 },
                 {
                     "name": "",
-                    "id": "b44e1aa3-8895-4b49-9f74-e579c9e7ee4e",
-                    "path": "",
+                    "id": "ad970463-5cc1-4161-8a0c-3540b690223f",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Map",
+                    "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "6c19286f-5dd7-40d3-aea4-2b09dfda7541",
-                    "path": "",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50ea09e7-d235-4415-be68-83f9dc6a8dc4",
+                    "path": "<Gamepad>/select",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = move * _speed;
         
         Animation(move);
-        
+        CheckInteract();
     }
 
     private void Animation(Vector2 move)
@@ -39,6 +39,15 @@ public class PlayerController : MonoBehaviour
             _anim.SetFloat("MoveX", _lastDirection.x);
             _anim.SetFloat("MoveY", _lastDirection.y);
             _anim.SetBool("IsMove", false);
+        }
+    }
+
+    private void CheckInteract()
+    {
+        if (G.InputManager.InteractPressed)
+        {
+            G.InteractionSystem.TryInteract();
+            _anim.SetTrigger("Interact");
         }
     }
 

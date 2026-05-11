@@ -5,6 +5,7 @@ public static class G
     public static SceneLoader SceneLoader;
     public static AudioManager AudioManager;
     public static InputManager InputManager;
+    public static InteractionSystem InteractionSystem;
 }
 
 public static class GameBootstrap 
@@ -28,6 +29,7 @@ public static class GameBootstrap
         G.AudioManager = CreateSimpleService<AudioManager>();
         G.SceneLoader = CreateSimpleService<SceneLoader>();
         G.InputManager = CreateSimpleService<InputManager>();
+        G.InteractionSystem = CreateSimpleService<InteractionSystem>();
         
         Debug.Log("Game Bootstrap initialized");
     }

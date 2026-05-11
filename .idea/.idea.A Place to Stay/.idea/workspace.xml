@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af658642-bc95-4a2e-91c6-2bed5fc88878" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.A Place to Stay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Place to Stay/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Characters/Main/PlayerAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Characters/Main/PlayerAnimator.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home of Feather.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home of Feather.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bootstrap/G.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bootstrap/G.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/InputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/InputSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/InputSystem.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/InputSystem.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +27,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/InteractionSystem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -113,7 +125,12 @@
       <updated>1777092502845</updated>
       <workItem from="1777092504647" duration="32480000" />
       <workItem from="1777400624791" duration="721000" />
-      <workItem from="1777404025497" duration="604000" />
+      <workItem from="1777404025497" duration="1224000" />
+      <workItem from="1777498072573" duration="6147000" />
+      <workItem from="1778414685421" duration="3916000" />
+      <workItem from="1778419819173" duration="193000" />
+      <workItem from="1778420038497" duration="69000" />
+      <workItem from="1778420187485" duration="87000" />
     </task>
     <servers />
   </component>

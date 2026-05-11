@@ -102,7 +102,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Use tool"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""d3881281-909c-4bb9-8b0b-061155cf4e88"",
                     ""expectedControlType"": """",
@@ -114,15 +114,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""name"": ""Menu"",
                     ""type"": ""Button"",
                     ""id"": ""e1bade4a-8ef7-4e8f-b9d2-5406ad055a76"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Map"",
-                    ""type"": ""Button"",
-                    ""id"": ""b8600721-302c-411b-9d58-3d0a21d8fdc3"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -142,18 +133,29 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1c05389c-11e7-4dac-bd26-fbd2ab3a981e"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Use tool"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fe596a0e-72fb-4439-ac56-8fbb9df5c97f"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""84967bae-03e9-4593-8119-b433c363c159"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -163,19 +165,30 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b44e1aa3-8895-4b49-9f74-e579c9e7ee4e"",
-                    ""path"": """",
+                    ""id"": ""ad970463-5cc1-4161-8a0c-3540b690223f"",
+                    ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Map"",
+                    ""action"": ""Menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""6c19286f-5dd7-40d3-aea4-2b09dfda7541"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50ea09e7-d235-4415-be68-83f9dc6a8dc4"",
+                    ""path"": ""<Gamepad>/select"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -301,9 +314,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_Usetool = m_Player.FindAction("Use tool", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
-        m_Player_Map = m_Player.FindAction("Map", throwIfNotFound: true);
         m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
     }
 
@@ -386,9 +398,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_Usetool;
+    private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Menu;
-    private readonly InputAction m_Player_Map;
     private readonly InputAction m_Player_Inventory;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
@@ -406,17 +417,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Move => m_Wrapper.m_Player_Move;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Usetool".
+        /// Provides access to the underlying input action "Player/Interact".
         /// </summary>
-        public InputAction @Usetool => m_Wrapper.m_Player_Usetool;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
         /// <summary>
         /// Provides access to the underlying input action "Player/Menu".
         /// </summary>
         public InputAction @Menu => m_Wrapper.m_Player_Menu;
-        /// <summary>
-        /// Provides access to the underlying input action "Player/Map".
-        /// </summary>
-        public InputAction @Map => m_Wrapper.m_Player_Map;
         /// <summary>
         /// Provides access to the underlying input action "Player/Inventory".
         /// </summary>
@@ -450,15 +457,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Usetool.started += instance.OnUsetool;
-            @Usetool.performed += instance.OnUsetool;
-            @Usetool.canceled += instance.OnUsetool;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
             @Menu.started += instance.OnMenu;
             @Menu.performed += instance.OnMenu;
             @Menu.canceled += instance.OnMenu;
-            @Map.started += instance.OnMap;
-            @Map.performed += instance.OnMap;
-            @Map.canceled += instance.OnMap;
             @Inventory.started += instance.OnInventory;
             @Inventory.performed += instance.OnInventory;
             @Inventory.canceled += instance.OnInventory;
@@ -476,15 +480,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Usetool.started -= instance.OnUsetool;
-            @Usetool.performed -= instance.OnUsetool;
-            @Usetool.canceled -= instance.OnUsetool;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
             @Menu.started -= instance.OnMenu;
             @Menu.performed -= instance.OnMenu;
             @Menu.canceled -= instance.OnMenu;
-            @Map.started -= instance.OnMap;
-            @Map.performed -= instance.OnMap;
-            @Map.canceled -= instance.OnMap;
             @Inventory.started -= instance.OnInventory;
             @Inventory.performed -= instance.OnInventory;
             @Inventory.canceled -= instance.OnInventory;
@@ -536,12 +537,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Use tool" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Interact" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnUsetool(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Menu" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
@@ -549,13 +550,6 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMenu(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Map" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMap(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Inventory" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
