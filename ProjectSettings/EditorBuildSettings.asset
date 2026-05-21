@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Menu/Menu.unity
     guid: d875fe27185d6124e9e23ec45acbd78d
   - enabled: 1
     path: Assets/Scenes/Home of Feather.unity

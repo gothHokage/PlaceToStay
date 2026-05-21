@@ -1,6 +1,14 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.mackysoft"
+      ]
+    }
+  ],
   "dependencies": {
-    "com.megurte.cms": "https://github.com/megurte/ContentManagementSystem.git?path=/src#1.5.21",
     "com.unity.cinemachine": "3.1.5",
     "com.unity.collab-proxy": "2.12.4",
     "com.unity.feature.2d": "2.0.2",
